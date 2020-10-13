@@ -20,8 +20,8 @@
 				</thead>
 				<tbody>
 					<tr v-for="(pair, i) in systemSitePairs" :key="i">
-						<td class="bg-warning">{{ pair[0] }}</td>
-						<td class="bg-primary text-white">{{ pair[1] }}</td>
+						<td class="bg-warning">{{ pair[1] }}</td>
+						<td class="bg-primary text-white">{{ pair[0] }}</td>
 						<td v-for="(date, k) in dates" :key="k">
 							<input class="text-center" type="number" v-model="chartTableData.find(v => v.data == date && v.system == pair[0] && v.site == pair[1]).value">
 						</td>
